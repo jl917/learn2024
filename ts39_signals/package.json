@@ -1,0 +1,34 @@
+{
+  "name": "react-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jl917/react-training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jl917/react-training/issues"
+  },
+  "homepage": "https://github.com/jl917/react-training#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "6.2.1",
+    "recoil": "^0.7.6"
+  },
+  "scripts": {
+    "start": "vite --mode dev",
+    "dev": "vite --mode dev",
+    "build": "vite build --mode production"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.19",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^1.1.4",
+    "vite": "^2.7.13"
+  }
+}
