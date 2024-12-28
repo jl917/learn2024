@@ -1,17 +1,17 @@
-import { Controller, Get, Param, Req } from '@nestjs/common';
+import { IsString, IsInt, Min, Max, IsOptional, IsArray } from 'class-validator';
+import { Type } from 'class-transformer';
 
-@Controller('cat')
-export class CatController {
-  @Get()
-  getHello(@Req() request: Request): string {
-    const forwarded = request.headers['x-forwarded-for'] as string;
-    console.log(forwarded.split(',')[0].trim());
-    return 'hellocat2';
-  }
+export class GetCatDto {
+  @IsString({ message: 'The name must be a string.' })
+  name: string;
 
-  @Get(':id')
-  getHello2(@Param() params: any): string {
-    console.log(params.id);
-    return `hello ${params.id}`;
-  }
+  @IsInt({ message: 'The age must be an integer.' })
+  @Min(18, { message: 'The age must be at least 18.' })
+  @Max(99, { message: 'The age must be 99 or less.' })
+  @Type(() => Number) // 숫자로 변환
+  age: number;
+
+  @IsOptional()
+  @IsArray()
+  emails?: string[]; // 선택적 필드
 }
