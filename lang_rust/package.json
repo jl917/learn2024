@@ -1,0 +1,12 @@
+{
+  "name": "lang_rust",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "rustc ./src/main.rs && ./main"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

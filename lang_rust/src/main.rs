@@ -1,5 +1,5 @@
 fn main() {
-    let a = "";
+    let a = "hello";
 
     println!("{}", a)
 }
